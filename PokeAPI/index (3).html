@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokédex</title>
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap">
+
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+  <header>
+    <div class="bar">
+      <div class="logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="13" stroke="#fff" stroke-width="2.5"/>
+          <path d="M3 16h26" stroke="#fff" stroke-width="2.5"/>
+          <circle cx="16" cy="16" r="4.5" fill="#FFCB05" stroke="#fff" stroke-width="2.5"/>
+        </svg>
+        Pokédex
+      </div>
+
+      <form id="search">
+        <input id="q" type="search" aria-label="Buscar Pokémon" placeholder="Nombre o número (ej. pikachu, 25)">
+        <button class="btn-yellow" type="submit">Buscar</button>
+      </form>
+    </div>
+  </header>
+
+  <main>
+
+    <div id="msg" role="alert"></div>
+
+    <!-- Botones anterior / siguiente -->
+    <div class="nav">
+      <button class="btn-white" id="prev">← Anterior</button>
+      <button class="btn-white" id="next">Siguiente →</button>
+    </div>
+
+
+    <section class="card main">
+
+
+      <div class="img-box">
+        <img id="art" alt="" hidden>
+      </div>
+
+
+      <div class="info">
+        <div>
+          <div class="num" id="num">N.º 000</div>
+          <h1 id="name">Cargando…</h1>
+          <div class="types" id="types"></div>
+        </div>
+
+        <div class="facts">
+          <div class="fact"><small>Altura</small><b id="height">–</b></div>
+          <div class="fact"><small>Peso</small><b id="weight">–</b></div>
+          <div class="fact"><small>Habilidades</small><b id="abilities">–</b></div>
+        </div>
+
+        <div class="stats">
+          <h2>Estadísticas base</h2>
+          <div id="stats"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="card">
+      <h2>Línea evolutiva</h2>
+      <div class="evo" id="evo"></div>
+    </section>
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
